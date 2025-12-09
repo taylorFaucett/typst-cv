@@ -11,7 +11,7 @@ settings:
   spacing-line: 5pt
   color-hyperlink: rgb(50, 120, 180)
   page:
-    paper: "a4"
+    paper: "us-letter"
     numbering: "1 / 1"
     number-align: "center"
     margin: 2.5cm
@@ -21,14 +21,14 @@ personal:
   name: Taylor Faucett
   titles:
     - Senior Machine Learning Engineer
-    - Data Scientist
+    - Physicist
   location:
     city: Los Angeles
     country: USA
   contact:
     email: taylorfaucett@gmail.com
     phone: "(801) 633-4509"
-    # website: https://taylorfaucett.dev
+    website: https://taylorfaucett.github.io
   profiles:
     - network: GitHub
       username: taylorfaucett
@@ -52,8 +52,10 @@ sections:
     title: Professional Summary
     show: true
     entries:
-      - I am a data scientist and machine learning specialist with over 5 years of experience developing innovative AI solutions for complex problems. My expertise lies in computer vision, natural language processing, and reinforcement learning, with a proven track record of translating research into production-ready systems. I am passionate about leveraging AI to create meaningful impact and committed to staying at the forefront of technological advancements in the field.
-      
+      - |
+          Senior Machine Learning Engineer and physicist specializing in computer vision, 3D spatial data, and robotics applications.
+          Build research-grade models and infrastructure that carry ideas from exploratory analysis to reliable, real-time deployment on robotic hardware, owning the full pipeline from data generation through model design, evaluation, and edge deployment.
+          Combine an academic background in machine learning for high-energy physics with industry experience to deliver interpretable, production-ready systems for complex, sensor-rich environments.
   - key: education
     layout: timeline
     primary-element: ["institution"]
@@ -90,25 +92,34 @@ sections:
         start-date: 06/2022
         end-date: Present
         description: |
-          Lead a team of five data scientists developing computer vision algorithms for autonomous systems. Developed and deployed machine learning models that improved object detection accuracy by 35% while reducing false positives by 40%. Collaborated with cross-functional teams to integrate AI solutions into production systems.
+          - Lead end-to-end ML for industrial robotic sheet-metal forming, from data collection and labeling to model design, evaluation, and deployment on edge devices.
+          - Develop real-time models for anomaly detection, process control, and trajectory planning using time-series and 3D sensor data.
+          - Design data and experimentation infrastructure (data warehousing, ETL, metrics, dashboards) to support rapid iteration and robust monitoring of ML systems in production.
+          - Collaborate with robotics, controls, and software teams to integrate ML into safety-critical systems, including CI/CD and infrastructure-as-code for on-prem hardware.
       - institution: University of California, Irvine
         title: Graduate Research Assistant & Postdoctoral Researcher
         start-date: 06/2015
         end-date: 06/2022
         description: |
-          Designed and implemented natural language processing systems for customer sentiment analysis. Created a scalable pipeline for processing over 1 million text documents daily. Reduced model training time by 60% through optimization techniques.
+          - Researched deep learning and computer vision methods for particle-physics detectors, focusing on robust classification, reconstruction, and anomaly detection under real-world constraints.
+          - Developed techniques for interpreting ML models and relating learned features to underlying physical mechanisms, improving trust and scientific insight.
+          - Built end-to-end ML pipelines for large simulated and experimental datasets, covering data generation, preprocessing, feature engineering, model design, hyperparameter optimization, and uncertainty-aware evaluation.
+          - Collaborated across international experimental collaborations and communicated ML results to both domain experts and non-specialists.
       - institution: University of Hawaii, Manoa
         title: Graduate Research Assistant
         start-date: 08/2011
         end-date: 05/2015
         description: |
-          Conducted research on reinforcement learning algorithms for robotic applications. Published three papers in top-tier ML conferences (NeurIPS, ICML). Developed open-source libraries for deep reinforcement learning research.
+          - Designed and implemented numerical simulations of Bose–Einstein condensates for a DoD-funded lattice-gas quantum computing experiment, bridging physics models and high-performance code.
+          - Integrated analysis and trigger software with FPGA-based readout for a neutrino telescope, working across hardware, firmware, and scientific analysis teams.
       - institution: Northrop Grumman Aerospace
         title: Systems Engineer
         start-date: 09/2009
         end-date: 05/2011
         description: |
-          Assisted in research on quantum computing algorithms. Developed software for simulating quantum circuits. Published a paper in the Journal of Physics A: Mathematical and Theoretical.
+          - Designed and deployed secure precision-time (PTP) radio networks for U.S. Air Force installations, focusing on reliability, timing accuracy, and security.
+          - Served as primary point of contact for network operations and reliability, tracking performance metrics and coordinating fixes with Air Force stakeholders.
+          - Held an active Secret security clearance.
 
   - key: publications
     layout: numbered-list
@@ -127,7 +138,7 @@ sections:
     secondary-element: ["professors"]
     tertiary-element: ["description"]
     title: Teaching Experience
-    show: true
+    show: false
     entries:
       - institution: Stanford University
         title: Advanced Machine Learning
@@ -156,27 +167,13 @@ sections:
     title: Honors & Awards
     show: true
     entries:
-      - institution: Association for Computing Machinery (ACM)
-        title: Rising Star in Artificial Intelligence
-        start-date: 2022
-        description: |
-          Annual award recognizing early-career researchers with exceptional contributions to the field of artificial intelligence.
-      - institution: NeurIPS
-        title: Best Paper Award
+      - institution: Chateaubriand Fellowship
+        title: Chateaubriand Fellowship
         start-date: 2020
         description: |
-          Awarded for our paper "A Novel Approach to Uncertainty Estimation in Deep Reinforcement Learning."
-      - institution: Stanford University
-        title: Outstanding Doctoral Dissertation
-        start-date: 2019
+          Prestigious fellowship awarded by the French Embassy to support research in machine learning and AI at a leading French institution.
+      - institution:  National Science Foundation
+        title: "NRT-DESE: Team Science for Integrative Graduate Training in Data Science and Physical Science"
+        start-date: 2016-2018
         description: |
-          Awarded for dissertation "Advancing Reinforcement Learning for Real-world Applications."
-      - institution: Stanford Computer Science Department
-        title: Teaching Excellence Award
-        start-date: 2018
-      - institution: National Science Foundation
-        title: Graduate Research Fellowship
-        start-date: 2015
-        end-date: 2018
-        description: |
-          Three-year fellowship funding doctoral research in computer science.
+          2 year NSF research grant for work in the interdisciplinary field of machine learning and the physical sciences.
