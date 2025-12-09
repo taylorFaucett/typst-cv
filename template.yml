@@ -1,0 +1,182 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/roaldarbol/academicv/main/cv.typ.schema.json
+
+# Document settings
+settings:
+  font-heading: "Libertinus Serif"
+  font-body: "Libertinus Serif"
+  fontsize: 10pt
+  spacing-section: 12pt
+  spacing-entry: 0.1em
+  spacing-element: 3pt
+  spacing-line: 5pt
+  color-hyperlink: rgb(50, 120, 180)
+  page:
+    paper: "a4"
+    numbering: "1 / 1"
+    number-align: "center"
+    margin: 2.5cm
+
+# Personal information
+personal:
+  name: Taylor Faucett
+  titles:
+    - Senior Machine Learning Engineer
+    - Data Scientist
+  location:
+    city: Los Angeles
+    country: USA
+  contact:
+    email: taylorfaucett@gmail.com
+    phone: "(801) 633-4509"
+    # website: https://taylorfaucett.dev
+  profiles:
+    - network: GitHub
+      username: taylorfaucett
+      url: https://github.com/taylorfaucett
+    - network: LinkedIn
+      username: taylorfaucett
+      url: https://linkedin.com/in/taylorfaucett
+    - network: Orcid
+      username: 0000-0003-3917-975X
+      url: https://orcid.org/0000-0003-3917-975X
+
+# Section definitions and content
+sections:
+  - key: personal
+    layout: header
+    show: true
+    include: ["titles", "location", "contact"]
+
+  - key: statement
+    layout: prose
+    title: Professional Summary
+    show: true
+    entries:
+      - I am a data scientist and machine learning specialist with over 5 years of experience developing innovative AI solutions for complex problems. My expertise lies in computer vision, natural language processing, and reinforcement learning, with a proven track record of translating research into production-ready systems. I am passionate about leveraging AI to create meaningful impact and committed to staying at the forefront of technological advancements in the field.
+      
+  - key: education
+    layout: timeline
+    primary-element: ["institution"]
+    secondary-element: ["title"]
+    title: Education
+    show: true
+    entries:
+      - institution: University of California, Irvine
+        location: Irvine, CA
+        title: Ph.D. in Physics
+        start-date: 2015
+        end-date: 2021
+      - institution: Univerity of Hawaii, Manoa
+        location: Honolulu, HI
+        title: M.S. in Physics
+        start-date: 2011
+        end-date: 2015
+      - institution: Westminster College
+        location: Salt Lake City, UT
+        title: B.S. in Physics, Minor in Mathematics and Music
+        start-date: 2005
+        end-date: 2009
+
+  - key: experience
+    layout: timeline
+    primary-element: ["institution"]
+    secondary-element: ["title"]
+    tertiary-element: ["description"]
+    title: Professional Experience
+    show: true
+    entries:
+      - institution: Machina Labs
+        title: Senior Machine Learning Engineer
+        start-date: 06/2022
+        end-date: Present
+        description: |
+          Lead a team of five data scientists developing computer vision algorithms for autonomous systems. Developed and deployed machine learning models that improved object detection accuracy by 35% while reducing false positives by 40%. Collaborated with cross-functional teams to integrate AI solutions into production systems.
+      - institution: University of California, Irvine
+        title: Graduate Research Assistant & Postdoctoral Researcher
+        start-date: 06/2015
+        end-date: 06/2022
+        description: |
+          Designed and implemented natural language processing systems for customer sentiment analysis. Created a scalable pipeline for processing over 1 million text documents daily. Reduced model training time by 60% through optimization techniques.
+      - institution: University of Hawaii, Manoa
+        title: Graduate Research Assistant
+        start-date: 08/2011
+        end-date: 05/2015
+        description: |
+          Conducted research on reinforcement learning algorithms for robotic applications. Published three papers in top-tier ML conferences (NeurIPS, ICML). Developed open-source libraries for deep reinforcement learning research.
+      - institution: Northrop Grumman Aerospace
+        title: Systems Engineer
+        start-date: 09/2009
+        end-date: 05/2011
+        description: |
+          Assisted in research on quantum computing algorithms. Developed software for simulating quantum circuits. Published a paper in the Journal of Physics A: Mathematical and Theoretical.
+
+  - key: publications
+    layout: numbered-list
+    title: Publications
+    show: true
+    entries:
+      - "Faucett, T., Hsu, SC. & Whiteson, D. Learning to identify semi-visible jets. J. High Energ. Phys. 2022, 132 (2022). https://doi.org/10.1007/JHEP12(2022)132"
+      - "Faucett, T., Thaler, J., Whiteson, D. Mapping machine-learned physics into a human-readable space. Phys. Rev. D 103, 036020 (2021). https://doi.org/10.1103/PhysRevD.103.036020"
+      - "Collado, J., Faucett, T., Witkowski, E. et al. Learning to isolate muons. J. High Energ. Phys. 2021, 200 (2021). https://doi.org/10.1007/JHEP10(2021)200"
+      - "Collado, J., Faucett, T., Howard, J. et al. Learning to identify electrons. Phys. Rev. D 103, 116028 (2021). https://doi.org/10.1103/PhysRevD.103.116028"
+      - "Baldi, P., Cranmer, K., Faucett, T. et al. Parameterized neural networks for high-energy physics. Eur. Phys. J. C 76, 235 (2016). https://doi.org/10.1140/epjc/s10052-016-4099-4"      
+
+  - key: teaching
+    layout: timeline
+    primary-element: ["title", "institution"]
+    secondary-element: ["professors"]
+    tertiary-element: ["description"]
+    title: Teaching Experience
+    show: true
+    entries:
+      - institution: Stanford University
+        title: Advanced Machine Learning
+        professors: ["Prof. Sarah Johnson"]
+        start-date: 2018
+        end-date: 2019
+        description: |
+          Teaching assistant for graduate-level course. Led weekly discussion sections, created homework assignments, and held office hours for a class of 120 students.
+      - institution: Stanford University
+        title: Introduction to Artificial Intelligence
+        professors: ["Prof. Michael Brown", "Prof. Lisa Chen"]
+        start-date: 2017
+        end-date: 2018
+        description: |
+          Teaching assistant for undergraduate course. Developed programming assignments and grading rubrics. Received Teaching Excellence Award based on student evaluations.
+      - institution: MIT OpenCourseWare
+        title: Python for Data Science
+        start-date: 2016
+        description: |
+          Created and recorded a series of online tutorials covering Python programming for data analysis and machine learning applications. Course has been accessed by over 50,000 students worldwide.
+
+  - key: awards
+    layout: timeline
+    primary-element: ["title", "institution"]
+    tertiary-element: ["description"]
+    title: Honors & Awards
+    show: true
+    entries:
+      - institution: Association for Computing Machinery (ACM)
+        title: Rising Star in Artificial Intelligence
+        start-date: 2022
+        description: |
+          Annual award recognizing early-career researchers with exceptional contributions to the field of artificial intelligence.
+      - institution: NeurIPS
+        title: Best Paper Award
+        start-date: 2020
+        description: |
+          Awarded for our paper "A Novel Approach to Uncertainty Estimation in Deep Reinforcement Learning."
+      - institution: Stanford University
+        title: Outstanding Doctoral Dissertation
+        start-date: 2019
+        description: |
+          Awarded for dissertation "Advancing Reinforcement Learning for Real-world Applications."
+      - institution: Stanford Computer Science Department
+        title: Teaching Excellence Award
+        start-date: 2018
+      - institution: National Science Foundation
+        title: Graduate Research Fellowship
+        start-date: 2015
+        end-date: 2018
+        description: |
+          Three-year fellowship funding doctoral research in computer science.
