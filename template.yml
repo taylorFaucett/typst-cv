@@ -162,6 +162,7 @@ sections:
           - { name: "Image Processing", level: 3 }
           - { name: "Object Detection", level: 2 }
           - { name: "OpenCV", level: 2 }
+          - { name: "Material Modeling", level: 2 }
       - category: Robotics
         items: 
           - { name: "ROS2", level: 3 }
