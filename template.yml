@@ -56,6 +56,7 @@ sections:
           Senior Machine Learning Engineer and physicist specializing in computer vision, 3D spatial data, and robotics applications.
           Build research-grade models and infrastructure that carry ideas from exploratory analysis to reliable, real-time deployment on robotic hardware, owning the full pipeline from data generation through model design, evaluation, and edge deployment.
           Combine an academic background in machine learning for high-energy physics with industry experience to deliver interpretable, production-ready systems for complex, sensor-rich environments.
+
   - key: education
     layout: timeline
     primary-element: ["institution"]
@@ -93,7 +94,7 @@ sections:
         end-date: Present
         description: |
           - Lead end-to-end ML for industrial robotic sheet-metal forming, from data collection and labeling to model design, evaluation, and deployment on edge devices.
-          - Develop real-time models for anomaly detection, process control, and trajectory planning using time-series and 3D sensor data.
+          - Develop real-time models for anomaly detection, geometry augmentation, and trajectory planning using time-series and 3D sensor data.
           - Design data and experimentation infrastructure (data warehousing, ETL, metrics, dashboards) to support rapid iteration and robust monitoring of ML systems in production.
           - Collaborate with robotics, controls, and software teams to integrate ML into safety-critical systems, including CI/CD and infrastructure-as-code for on-prem hardware.
       - institution: University of California, Irvine
@@ -126,39 +127,62 @@ sections:
     title: Publications
     show: true
     entries:
+      - "Faucett, T. Decoding Black Box Models to Find New Physics at the LHC. Ph.D. Dissertation, University of California, Irvine (2021). https://escholarship.org/uc/item/63x9r13b"
       - "Faucett, T., Hsu, SC. & Whiteson, D. Learning to identify semi-visible jets. J. High Energ. Phys. 2022, 132 (2022). https://doi.org/10.1007/JHEP12(2022)132"
       - "Faucett, T., Thaler, J., Whiteson, D. Mapping machine-learned physics into a human-readable space. Phys. Rev. D 103, 036020 (2021). https://doi.org/10.1103/PhysRevD.103.036020"
       - "Collado, J., Faucett, T., Witkowski, E. et al. Learning to isolate muons. J. High Energ. Phys. 2021, 200 (2021). https://doi.org/10.1007/JHEP10(2021)200"
       - "Collado, J., Faucett, T., Howard, J. et al. Learning to identify electrons. Phys. Rev. D 103, 116028 (2021). https://doi.org/10.1103/PhysRevD.103.116028"
       - "Baldi, P., Cranmer, K., Faucett, T. et al. Parameterized neural networks for high-energy physics. Eur. Phys. J. C 76, 235 (2016). https://doi.org/10.1140/epjc/s10052-016-4099-4"      
 
-  - key: teaching
-    layout: timeline
-    primary-element: ["title", "institution"]
-    secondary-element: ["professors"]
-    tertiary-element: ["description"]
-    title: Teaching Experience
-    show: false
+  - key: skills
+    layout: skills
+    title: Technical Skills
+    show: true
     entries:
-      - institution: Stanford University
-        title: Advanced Machine Learning
-        professors: ["Prof. Sarah Johnson"]
-        start-date: 2018
-        end-date: 2019
-        description: |
-          Teaching assistant for graduate-level course. Led weekly discussion sections, created homework assignments, and held office hours for a class of 120 students.
-      - institution: Stanford University
-        title: Introduction to Artificial Intelligence
-        professors: ["Prof. Michael Brown", "Prof. Lisa Chen"]
-        start-date: 2017
-        end-date: 2018
-        description: |
-          Teaching assistant for undergraduate course. Developed programming assignments and grading rubrics. Received Teaching Excellence Award based on student evaluations.
-      - institution: MIT OpenCourseWare
-        title: Python for Data Science
-        start-date: 2016
-        description: |
-          Created and recorded a series of online tutorials covering Python programming for data analysis and machine learning applications. Course has been accessed by over 50,000 students worldwide.
+      - category: Languages
+        items: 
+          - { name: "Python", level: 3 }
+          - { name: "Rust", level: 2 }
+          - { name: "SQL", level: 2 }
+          - { name: "Bash/Shell", level: 2 }
+          - { name: "C++", level: 1 }
+      - category: ML/DL
+        items: 
+          - { name: "PyTorch", level: 3 }
+          - { name: "NumPy", level: 3 }
+          - { name: "Pandas/Polars", level: 3 }
+          - { name: "scikit-learn", level: 3 }
+          - { name: "TensorFlow/Keras", level: 2 }
+          - { name: "ONNX", level: 2 }
+          - { name: "MLflow", level: 2 }
+          - { name: "TensorBoard", level: 2 }
+      - category: Computer Vision
+        items: 
+          - { name: "3D Point Cloud/Mesh", level: 3 }
+          - { name: "Image Processing", level: 3 }
+          - { name: "Object Detection", level: 2 }
+          - { name: "OpenCV", level: 2 }
+      - category: Robotics
+        items: 
+          - { name: "ROS2", level: 3 }
+          - { name: "Edge/Embedded ML", level: 2 }
+          - { name: "Real-time Systems", level: 2 }
+      - category: Data & Cloud
+        items: 
+          - { name: "Azure/Azure Gov", level: 3 }
+          - { name: "ETL Pipelines", level: 3 }
+          - { name: "Kafka/RabbitMQ", level: 3 }
+          - { name: "Databricks", level: 3 }
+          - { name: "PySpark", level: 2 }
+          - { name: "InfluxDB", level: 2 }
+      - category: DevOps
+        items: 
+          - { name: "Docker", level: 3 }
+          - { name: "Kubernetes", level: 2 }
+          - { name: "Terraform", level: 2 }
+          - { name: "CI/CD", level: 3 }
+          - { name: "Linux/Unix", level: 3 }
+          - { name: "Git", level: 3 }
 
   - key: awards
     layout: timeline

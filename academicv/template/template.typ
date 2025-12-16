@@ -1,11 +1,7 @@
-#import "academicv/cv.typ": *
+#import "@preview/academicv:1.0.0": *
 
 // Or for local development
 // #import "../cv.typ": *
-
-// Local layouts
-#import "layouts/education.typ": layout-timeline-education
-#import "layouts/skills.typ": layout-skills
 
 // Import your CV data
 #let cv-data = yaml("template.yml")
@@ -122,24 +118,6 @@
 }
 
 #show: doc => cvinit(doc)
-
-// Extend cvsection to handle custom layouts
-#let academicv-cvsection = cvsection
-#let cvsection(info, layout: none, section: none, title: none, settings: none, isbreakable: true) = {
-  if layout == "timeline" and section == "education" {
-    block[
-      == #title
-      #layout-timeline-education(info.at(section), settings: settings, isbreakable: isbreakable)
-    ]
-  } else if layout == "skills" {
-    block[
-      == #title
-      #layout-skills(info.at(section), settings: settings, isbreakable: isbreakable)
-    ]
-  } else {
-    academicv-cvsection(info, layout: layout, section: section, title: title, settings: settings, isbreakable: isbreakable)
-  }
-}
 
 // Process CV sections dynamically based on the YAML configuration
 #if "sections" in cv-data {
