@@ -187,7 +187,7 @@ sections:
         items:
           - { name: "PointNet / PointNet++", level: 2 }
           - { name: "3D CNNs", level: 2 }
-          - { name: "Graph Neural Networks", level: 2 }
+          - { name: "Graph Networks", level: 2 }
           - { name: "3D Transformers", level: 1 }
           - { name: "Diffusion Models (3D)", level: 1 }
       - category: Vision & Perception
@@ -201,12 +201,11 @@ sections:
           - { name: "ROS2", level: 3 }
           - { name: "LLM-Assisted Robot Operation", level: 2 }
           - { name: "Edge/Embedded ML", level: 2 }
-          - { name: "Real-time Systems", level: 2 }
-      - category: Physics/Simulation
+      - category: Physics & Sim
         items:
-          - { name: "Material behavior in forming", level: 2 }
+          - { name: "Material forming behavior", level: 2 }
           - { name: "Physics-informed ML", level: 2 }
-          - { name: "Constraints & optimization", level: 2 }
+          - { name: "Constraints-based optimization", level: 2 }
       - category: Data & Cloud
         items: 
           - { name: "ETL Pipelines", level: 3 }

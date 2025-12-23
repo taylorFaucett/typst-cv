@@ -3,8 +3,7 @@
     none
   } else {
     let label-width = 8.8em
-    let item-columns = 2  // Number of columns for skill items
-    let skill-name-width = 10.5em  // Fixed width for skill names
+    let item-columns = 3  // Number of columns for skill items
 
     // Render proficiency indicators (filled/unfilled circles)
     let render-proficiency(level) = {
@@ -23,24 +22,24 @@
       text(size: 0.7em, fill: rgb(100, 100, 100))[#circles.join(" ")]
     }
 
-    // Render a single skill item with fixed-width name and aligned dots
+    // Render a single skill item with dots on the left for better alignment
     let render-item(item) = {
       if type(item) == dictionary {
         let name = item.name
         let level = item.at("level", default: none)
         if level != none {
           grid(
-            columns: (skill-name-width, auto),
-            column-gutter: 0.5em,
-            align: (left, left),
-            [#name],
-            render-proficiency(level)
+            columns: (auto, 1fr),
+            column-gutter: 0.6em,
+            align: (right, left + horizon),
+            render-proficiency(level),
+            [#name]
           )
         } else {
-          box(width: skill-name-width)[#name]
+          [#name]
         }
       } else {
-        box(width: skill-name-width)[#item]
+        [#item]
       }
     }
 
@@ -52,7 +51,7 @@
         grid(
           columns: item-columns,
           column-gutter: 1.5em,
-          row-gutter: 0.35em,
+          row-gutter: 0.8em,
           ..items.map(item => render-item(item))
         )
       }
