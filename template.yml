@@ -53,9 +53,9 @@ sections:
     show: true
     entries:
       - |
-          Senior Machine Learning Engineer and physicist specializing in 3D perception and geometric representations for robotics and advanced manufacturing.
-          Build production ML systems that ingest CAD/mesh/point-cloud data for computational geometry, create datasets and labeling workflows, and deploy low-latency inference on robotic hardware.
-          Experienced with geometry/physics constraints (material behavior in forming), geometric deep learning (PointNet-style models, 3D CNNs, graph networks), and LLM-driven robot operation.
+          Senior Machine Learning Engineer and physicist with 3+ years leading ML development for 3D perception, scene understanding, and geometric reasoning in robotics and advanced manufacturing.
+          Build production ML systems that create learned embeddings from CAD/mesh/point-cloud data, design dataset curation and labeling pipelines, and deploy real-time inference on edge hardware.
+          Deep expertise in geometric deep learning (PointNet-style models, 3D CNNs, graph networks), physics-informed models for material behavior, and multimodal pipelines integrating geometry with LLM-driven agents.
 
   - key: education
     layout: timeline
@@ -93,12 +93,14 @@ sections:
         start-date: 06/2022
         end-date: Present
         description: |
-          - Lead end-to-end ML for industrial robotic sheet-metal forming, from 3D data capture/labeling through model design, evaluation, and deployment on on-prem/edge hardware.
-          - Build geometry tooling (CAD/mesh/point cloud manipulation, coordinate-frame transforms, kinematics-aware features) used across perception, mesh prep and path planning.
-          - Develop models that reason about geometry, physics, and constraints for forming processes; incorporate material behavior and simulation/measurement signals to train and validate models for double-sided incremental forming.
-          - Create multimodal pipelines that combine geometric context with language-based interfaces for LLM-driven robot operation, focusing on constrained action spaces and operational safety.
-          - Own data and experimentation infrastructure (ETL, dataset versioning, metrics/dashboards, monitoring) to support rapid iteration and reliable inference in production.
-          - Partner with robotics, controls, and software teams to integrate ML into safety-critical systems, including CI/CD and infrastructure-as-code for deployed cells.
+          - Lead end-to-end ML for industrial robotic sheet-metal forming, from dataset curation and labeling pipelines through model design, evaluation, and deployment on edge hardware for real-time inference.
+          - Train real-time anomaly detection models deployed on edge devices, enabling in-process quality monitoring and early fault detection during robotic forming operations.
+          - Develop physics-informed ML models trained on material stamping literature to predict failure likelihood, incorporating material properties and forming parameters to prevent defects.
+          - Build mesh adjustment models for Double-Sided Incremental Forming (DSIF) that learn springback compensation—predicting geometry corrections so parts resolve to their final desired shape after elastic recovery.
+          - Create learned embeddings and representations from 3D geometry (meshes, point clouds, CAD) that encode spatial structure and physical constraints for downstream reasoning and path planning.
+          - Build multimodal pipelines combining geometric context with language-based interfaces for LLM-driven robot operation, focusing on constrained action spaces and operational safety.
+          - Own data infrastructure (ETL, dataset versioning, metrics/dashboards, monitoring) and mentor junior engineers on ML best practices and geometric data pipelines.
+          - Partner with robotics, controls, and software teams to integrate ML into safety-critical systems, including CI/CD and infrastructure-as-code for deployed robotic cells.
       - institution: University of California, Irvine
         title: Graduate Research Assistant & Postdoctoral Researcher
         start-date: 06/2015
@@ -183,6 +185,7 @@ sections:
           - { name: "Mesh/Point Cloud", level: 3 }
           - { name: "Coordinate Frames & Kinematics", level: 3 }
           - { name: "CAD / 3D Formats (STEP, STL, OBJ, PLY)", level: 2 }
+          - { name: "SDFs / Occupancy Grids", level: 2 }
       - category: Geometric Deep Learning
         items:
           - { name: "PointNet / PointNet++", level: 2 }
@@ -193,8 +196,9 @@ sections:
       - category: Vision & Perception
         items:
           - { name: "3D Perception Pipelines", level: 3 }
+          - { name: "Scene Understanding", level: 3 }
           - { name: "Sensor Fusion (3D + time-series)", level: 2 }
-          - { name: "Anomaly Detection", level: 2 }
+          - { name: "Real-time Anomaly Detection", level: 3 }
           - { name: "OpenCV", level: 2 }
       - category: Robotics
         items: 
