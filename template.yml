@@ -141,6 +141,30 @@ sections:
           - Developing a Rust-native alternative to PCL/Open3D for performant, safe mesh/point-cloud processing and geometry utilities.
           - Designed for interoperability with robotics workflows and telemetry/visualization platforms (ROS2, Foxglove, Rerun), with a focus on clean APIs and production deployment.
 
+  - key: skills
+    layout: skills
+    title: Technical Skills
+    show: true
+    entries:
+      - category: Languages
+        items: [Python, Rust, SQL, C++, TypeScript/JavaScript, Bash/Shell]
+      - category: ML Engineering
+        items: [PyTorch, NumPy, Pandas/Polars, scikit-learn, ONNX, MLflow, Weights & Biases, Optuna, Ray, Torch Lightning]
+      - category: 3D Geometry/CAD
+        items: [Mesh/Point Cloud Processing, Coordinate Frames & Kinematics, "CAD Formats (STEP, STL, OBJ, PLY)", SDFs/Occupancy Grids]
+      - category: Geometric Deep Learning
+        items: [PointNet/PointNet++, 3D CNNs, Graph Networks, Flow Matching, 3D Transformers, Diffusion Models]
+      - category: Vision/Perception
+        items: [3D Perception Pipelines, Scene Understanding, Sensor Fusion, Real-time Anomaly Detection, OpenCV]
+      - category: Robotics
+        items: [ROS2, LLM-Assisted Robot Operation, Edge/Embedded ML]
+      - category: Physics/Simulation
+        items: [Material Forming Behavior, Physics-informed ML, Constraints-based Optimization]
+      - category: Data & Infrastructure
+        items: [ETL Pipelines, Dataset Versioning, Azure/AWS, InfluxDB, Kafka/RabbitMQ]
+      - category: DevOps
+        items: [Docker, Kubernetes, Terraform, CI/CD, Linux/Unix, Git]
+
   - key: publications
     layout: numbered-list
     title: Publications
@@ -152,80 +176,6 @@ sections:
       - "Collado, J., Faucett, T., Witkowski, E. et al. Learning to isolate muons. J. High Energ. Phys. 2021, 200 (2021). https://doi.org/10.1007/JHEP10(2021)200"
       - "Collado, J., Faucett, T., Howard, J. et al. Learning to identify electrons. Phys. Rev. D 103, 116028 (2021). https://doi.org/10.1103/PhysRevD.103.116028"
       - "Baldi, P., Cranmer, K., Faucett, T. et al. Parameterized neural networks for high-energy physics. Eur. Phys. J. C 76, 235 (2016). https://doi.org/10.1140/epjc/s10052-016-4099-4"      
-
-  - key: skills
-    layout: skills
-    title: Technical Skills
-    show: true
-    entries:
-      - category: Languages
-        items: 
-          - { name: "Python", level: 3 }
-          - { name: "Rust", level: 2 }
-          - { name: "JS/TS", level: 2 }
-          - { name: "SQL", level: 2 }
-          - { name: "Bash/Shell", level: 2 }
-          - { name: "C++", level: 1 }
-      - category: ML Engineering
-        items: 
-          - { name: "PyTorch", level: 3 }
-          - { name: "NumPy", level: 3 }
-          - { name: "Pandas/Polars", level: 3 }
-          - { name: "scikit-learn", level: 3 }
-          - { name: "TensorFlow/Keras", level: 2 }
-          - { name: "ONNX", level: 2 }
-          - { name: "MLflow", level: 2 }
-          - { name: "TensorBoard", level: 2 }
-          - { name: "Weights & Biases", level: 2 }
-          - { name: "Optuna", level: 2 }
-          - { name: "Torch Lightning", level: 2 }
-          - { name: "Ray", level: 1 }
-      - category: 3D Geometry & CAD
-        items: 
-          - { name: "Mesh/Point Cloud", level: 3 }
-          - { name: "Coordinate Frames & Kinematics", level: 3 }
-          - { name: "CAD / 3D Formats (STEP, STL, OBJ, PLY)", level: 2 }
-          - { name: "SDFs / Occupancy Grids", level: 2 }
-      - category: Geometric Deep Learning
-        items:
-          - { name: "PointNet / PointNet++", level: 2 }
-          - { name: "3D CNNs", level: 2 }
-          - { name: "Graph Networks", level: 2 }
-          - { name: "3D Transformers", level: 1 }
-          - { name: "Diffusion Models (3D)", level: 1 }
-      - category: Vision & Perception
-        items:
-          - { name: "3D Perception Pipelines", level: 3 }
-          - { name: "Scene Understanding", level: 3 }
-          - { name: "Sensor Fusion (3D + time-series)", level: 2 }
-          - { name: "Real-time Anomaly Detection", level: 3 }
-          - { name: "OpenCV", level: 2 }
-      - category: Robotics
-        items: 
-          - { name: "ROS2", level: 3 }
-          - { name: "LLM-Assisted Robot Operation", level: 2 }
-          - { name: "Edge/Embedded ML", level: 2 }
-      - category: Physics & Sim
-        items:
-          - { name: "Material forming behavior", level: 2 }
-          - { name: "Physics-informed ML", level: 2 }
-          - { name: "Constraints-based optimization", level: 2 }
-      - category: Data & Cloud
-        items: 
-          - { name: "ETL Pipelines", level: 3 }
-          - { name: "Kafka/RabbitMQ", level: 3 }
-          - { name: "Databricks", level: 3 }
-          - { name: "Azure/AWS", level: 2 }
-          - { name: "PySpark", level: 2 }
-          - { name: "InfluxDB", level: 2 }
-      - category: DevOps
-        items: 
-          - { name: "Docker", level: 3 }
-          - { name: "Kubernetes", level: 2 }
-          - { name: "Terraform", level: 2 }
-          - { name: "CI/CD", level: 3 }
-          - { name: "Linux/Unix", level: 3 }
-          - { name: "Git", level: 3 }
 
   - key: awards
     layout: timeline
