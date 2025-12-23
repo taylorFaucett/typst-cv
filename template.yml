@@ -69,7 +69,7 @@ sections:
         title: Ph.D. in Physics
         start-date: 2015
         end-date: 2021
-      - institution: Univerity of Hawaii, Manoa
+      - institution: University of Hawaii, Manoa
         location: Honolulu, HI
         title: M.S. in Physics
         start-date: 2011
@@ -180,7 +180,7 @@ sections:
           - { name: "Ray", level: 1 }
       - category: 3D Geometry & CAD
         items: 
-          - { name: "Meshes & Point Clouds", level: 3 }
+          - { name: "Mesh/Point Cloud", level: 3 }
           - { name: "Coordinate Frames & Kinematics", level: 3 }
           - { name: "CAD / 3D Formats (STEP, STL, OBJ, PLY)", level: 2 }
       - category: Geometric Deep Learning

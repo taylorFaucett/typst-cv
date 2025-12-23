@@ -59,7 +59,10 @@
 
     // Main grid with category labels and skill items
     let row-items = ()
-    for entry in entries {
+    for (i, entry) in entries.enumerate() {
+      if i != 0 {
+        row-items.push(grid.cell(colspan: 2, line(length: 100%, stroke: 0.5pt + rgb(200, 200, 200))))
+      }
       row-items.push(
         align(right + top)[
           #text(weight: "semibold")[#smallcaps(entry.category)]
