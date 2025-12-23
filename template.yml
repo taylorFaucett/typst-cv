@@ -53,9 +53,9 @@ sections:
     show: true
     entries:
       - |
-          Senior Machine Learning Engineer and physicist specializing in computer vision, 3D spatial data, and robotics applications.
-          Build research-grade models and infrastructure that carry ideas from exploratory analysis to reliable, real-time deployment on robotic hardware, owning the full pipeline from data generation through model design, evaluation, and edge deployment.
-          Combine an academic background in machine learning for high-energy physics with industry experience to deliver interpretable, production-ready systems for complex, sensor-rich environments.
+          Senior Machine Learning Engineer and physicist specializing in 3D perception and geometric representations for robotics and advanced manufacturing.
+          Build production ML systems that ingest CAD/mesh/point-cloud data for computational geometry, create datasets and labeling workflows, and deploy low-latency inference on robotic hardware.
+          Experienced with geometry/physics constraints (material behavior in forming), geometric deep learning (PointNet-style models, 3D CNNs, graph networks), and LLM-driven robot operation.
 
   - key: education
     layout: timeline
@@ -93,10 +93,12 @@ sections:
         start-date: 06/2022
         end-date: Present
         description: |
-          - Lead end-to-end ML for industrial robotic sheet-metal forming, from data collection and labeling to model design, evaluation, and deployment on edge devices.
-          - Develop real-time models for anomaly detection, geometry augmentation, and trajectory planning using time-series and 3D sensor data.
-          - Design data and experimentation infrastructure (data warehousing, ETL, metrics, dashboards) to support rapid iteration and robust monitoring of ML systems in production.
-          - Collaborate with robotics, controls, and software teams to integrate ML into safety-critical systems, including CI/CD and infrastructure-as-code for on-prem hardware.
+          - Lead end-to-end ML for industrial robotic sheet-metal forming, from 3D data capture/labeling through model design, evaluation, and deployment on on-prem/edge hardware.
+          - Build geometry tooling (CAD/mesh/point cloud manipulation, coordinate-frame transforms, kinematics-aware features) used across perception, mesh prep and path planning.
+          - Develop models that reason about geometry, physics, and constraints for forming processes; incorporate material behavior and simulation/measurement signals to train and validate models for double-sided incremental forming.
+          - Create multimodal pipelines that combine geometric context with language-based interfaces for LLM-driven robot operation, focusing on constrained action spaces and operational safety.
+          - Own data and experimentation infrastructure (ETL, dataset versioning, metrics/dashboards, monitoring) to support rapid iteration and reliable inference in production.
+          - Partner with robotics, controls, and software teams to integrate ML into safety-critical systems, including CI/CD and infrastructure-as-code for deployed cells.
       - institution: University of California, Irvine
         title: Graduate Research Assistant & Postdoctoral Researcher
         start-date: 06/2015
@@ -119,8 +121,23 @@ sections:
         end-date: 05/2011
         description: |
           - Designed and deployed secure precision-time (PTP) radio networks for U.S. Air Force installations, focusing on reliability, timing accuracy, and security.
-          - Served as primary point of contact for network operations and reliability, tracking performance metrics and coordinating fixes with Air Force stakeholders.
           - Held an active Secret security clearance.
+
+  - key: projects
+    layout: timeline
+    primary-element: ["institution"]
+    secondary-element: ["title"]
+    tertiary-element: ["description"]
+    title: Selected Open-Source & Personal Projects
+    show: true
+    entries:
+      - institution: Rust 3D Geometry & Robotics Data Stack
+        title: Private (active development; details available upon request)
+        start-date: 2024
+        end-date: Present
+        description: |
+          - Developing a Rust-native alternative to PCL/Open3D for performant, safe mesh/point-cloud processing and geometry utilities.
+          - Designed for interoperability with robotics workflows and telemetry/visualization platforms (ROS2, Foxglove, Rerun), with a focus on clean APIs and production deployment.
 
   - key: publications
     layout: numbered-list
@@ -143,10 +160,11 @@ sections:
         items: 
           - { name: "Python", level: 3 }
           - { name: "Rust", level: 2 }
+          - { name: "JS/TS", level: 2 }
           - { name: "SQL", level: 2 }
           - { name: "Bash/Shell", level: 2 }
           - { name: "C++", level: 1 }
-      - category: ML/DL
+      - category: ML Engineering
         items: 
           - { name: "PyTorch", level: 3 }
           - { name: "NumPy", level: 3 }
@@ -156,24 +174,45 @@ sections:
           - { name: "ONNX", level: 2 }
           - { name: "MLflow", level: 2 }
           - { name: "TensorBoard", level: 2 }
-      - category: Computer Vision
+          - { name: "Weights & Biases", level: 2 }
+          - { name: "Optuna", level: 2 }
+          - { name: "Torch Lightning", level: 2 }
+          - { name: "Ray", level: 1 }
+      - category: 3D Geometry & CAD
         items: 
-          - { name: "3D Point Cloud/Mesh", level: 3 }
-          - { name: "Image Processing", level: 3 }
-          - { name: "Object Detection", level: 2 }
+          - { name: "Meshes & Point Clouds", level: 3 }
+          - { name: "Coordinate Frames & Kinematics", level: 3 }
+          - { name: "CAD / 3D Formats (STEP, STL, OBJ, PLY)", level: 2 }
+      - category: Geometric Deep Learning
+        items:
+          - { name: "PointNet / PointNet++", level: 2 }
+          - { name: "3D CNNs", level: 2 }
+          - { name: "Graph Neural Networks", level: 2 }
+          - { name: "3D Transformers", level: 1 }
+          - { name: "Diffusion Models (3D)", level: 1 }
+      - category: Vision & Perception
+        items:
+          - { name: "3D Perception Pipelines", level: 3 }
+          - { name: "Sensor Fusion (3D + time-series)", level: 2 }
+          - { name: "Anomaly Detection", level: 2 }
           - { name: "OpenCV", level: 2 }
-          - { name: "Material Modeling", level: 2 }
       - category: Robotics
         items: 
           - { name: "ROS2", level: 3 }
+          - { name: "LLM-Assisted Robot Operation", level: 2 }
           - { name: "Edge/Embedded ML", level: 2 }
           - { name: "Real-time Systems", level: 2 }
+      - category: Physics/Simulation
+        items:
+          - { name: "Material behavior in forming", level: 2 }
+          - { name: "Physics-informed ML", level: 2 }
+          - { name: "Constraints & optimization", level: 2 }
       - category: Data & Cloud
         items: 
-          - { name: "Azure/Azure Gov", level: 3 }
           - { name: "ETL Pipelines", level: 3 }
           - { name: "Kafka/RabbitMQ", level: 3 }
           - { name: "Databricks", level: 3 }
+          - { name: "Azure/AWS", level: 2 }
           - { name: "PySpark", level: 2 }
           - { name: "InfluxDB", level: 2 }
       - category: DevOps

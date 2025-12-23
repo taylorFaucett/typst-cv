@@ -8,7 +8,10 @@
 #import "layouts/skills.typ": layout-skills
 
 // Import your CV data
-#let cv-data = yaml("template.yml")
+// Allow overriding the YAML file via CLI:
+// `typst compile cv.typ out.pdf --input data=template.yml`
+#let data-file = sys.inputs.at("data", default: "template.yml")
+#let cv-data = yaml(data-file)
 
 // Validate that required fields exist in each section
 #for section in cv-data.sections {
