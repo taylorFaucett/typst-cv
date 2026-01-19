@@ -23,6 +23,15 @@
     } else {none}
 }
 
+#let clearance-text(data, settings) = {
+    if ("clearance" in data.personal and data.personal.clearance != none and str(data.personal.clearance) != "") {
+        block(width: 100%)[
+            #data.personal.clearance
+            #v(-4pt)
+        ]
+    } else {none}
+}
+
 #let contact-text(data, settings) = block(width: 100%)[
     #let profiles = (
         if "email" in data.personal.contact and data.personal.contact.email != none { box(link("mailto:" + data.personal.contact.email)) },
@@ -61,6 +70,10 @@
                     
                     if item == "location" {
                         address-text(data, settings)
+                    }
+
+                    if item == "clearance" {
+                        clearance-text(data, settings)
                     }
                     
                     if item == "contact" {
