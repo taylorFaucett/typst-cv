@@ -21,14 +21,14 @@ personal:
   name: Taylor Faucett
   titles:
     - Senior Machine Learning Engineer
-    - Physicist
+    - 3D ML Engineer
   location:
     city: Los Angeles
     country: USA
   contact:
     email: taylorfaucett@gmail.com
     phone: "+1 (801) 633-4509"
-    website: https://taylorfaucett.github.io
+    # website: https://taylorfaucett.github.io
   profiles:
     - network: GitHub
       username: taylorfaucett
@@ -36,9 +36,9 @@ personal:
     - network: LinkedIn
       username: taylorfaucett
       url: https://linkedin.com/in/taylorfaucett
-    - network: Orcid
-      username: 0000-0003-3917-975X
-      url: https://orcid.org/0000-0003-3917-975X
+    # - network: Orcid
+    #   username: 0000-0003-3917-975X
+    #   url: https://orcid.org/0000-0003-3917-975X
 
 # Section definitions and content
 sections:
@@ -53,9 +53,8 @@ sections:
     show: true
     entries:
       - |
-          Senior Machine Learning Engineer with a physics background building and shipping ML systems for real-world physical engineering: robotics, advanced manufacturing, and geometry-heavy perception/reasoning.
-          Own end-to-end delivery from problem framing and dataset curation/labeling to model development, evaluation, and deployment on edge/real-time systems in safety- and reliability-constrained environments.
-          Strong in geometric deep learning and 3D representations (CAD/mesh/point clouds), physics-informed modeling for material behavior, and multimodal pipelines that pair geometric context with LLM-driven, tool-using agents.
+          Senior Machine Learning Engineer specializing in geometric deep learning and 3D geometry processing for custom manufacturing, delivering production ML systems end-to-end from data pipelines and model development through real-time, edge-deployed inference on safety-constrained hardware.
+          Deep expertise in 3D image and geometry processing (meshes, point clouds, CAD/STEP/STL), learned models for material behavior and process dynamics, and full-stack delivery: PyTorch, CI/CD on AWS/Azure, and 3D web tooling (Three.js/Threlte, SvelteKit, Tauri).
 
   - key: education
     layout: timeline
@@ -93,16 +92,12 @@ sections:
         start-date: 06/2022
         end-date: Present
         description: |
-          - Own end-to-end ML delivery for industrial robotic sheet-metal forming (DSIF), from dataset curation/labeling and experiment design through model development, evaluation, and deployment for real-time inference (Rust).
-          - Built an automated, coarse-to-fine 3D registration system for low-feature sheet-metal geometry (global consensus → constrained ICP) to avoid “sliding” failure modes; enabled CAD-to-scan error measurement and closed-loop compensation with ~0.2 mm average alignment accuracy.
-          - Implemented the DeepGlobalRegistration-style approach in Rust (Burn), avoiding GPU-only dependencies and keeping the design compatible with future embedded/`no_std` deployment.
-          - Ship production anomaly detection and monitoring models to enable in-process quality control and early fault detection in robotic forming operations.
-          - Develop physics-informed models (material behavior + process parameters) to predict defect risk and guide process adjustments to prevent failures.
-          - Build geometry learning systems: embeddings and representations from 3D CAD/meshes/point clouds that encode spatial structure and physical constraints for downstream reasoning and planning.
-          - Develop springback compensation models for Double-Sided Incremental Forming (DSIF), predicting geometry corrections so formed parts converge to target shape after elastic recovery.
-          - Build multimodal workflows that combine geometric context with LLM-style language interfaces for constrained, tool-using robot operation with an emphasis on safety.
-          - Own data and ML infrastructure (ETL, dataset/versioning, metrics/dashboards, monitoring) and mentor engineers on geometric data pipelines and production ML practices.
-          - Partner cross-functionally (robotics, controls, software) to integrate ML into deployed robotic cells, including CI/CD and infrastructure-as-code.
+          - Own end-to-end ML delivery for industrial robotic forming (DSIF): dataset curation, experiment design, model development and evaluation, and real-time deployment in Rust on physical robotic cells.
+          - Deployed a real-time TCN force-forecasting model in Rust on edge hardware — context-conditioned on toolpath geometry and material — for in-process anomaly detection, triggering safety stops when forming behavior deviates from nominal.
+          - Developed a GNN springback compensation model trained on historical scan-to-CAD error maps from iterative forming campaigns, predicting per-vertex geometry offsets to reduce the iterations needed to converge formed parts to target shape.
+          - Built a learned 3D inspection pipeline: PointNet-based scan cleaning (inlier/outlier classification trained on synthetically corrupted data) feeding into a scan-to-CAD registration system (learned feature extraction → inlier MLP → RANSAC + ICP refinement), achieving ~0.2 mm alignment accuracy for downstream quality measurement and compensation.
+          - Built two full-stack production tools: a Tauri desktop app (Svelte/TypeScript + Three.js/Threlte frontend, Rust/Tokio backend with gRPC streaming at 125 Hz and ONNX/Burn inference) for real-time robotics monitoring and safety-critical control; and a SvelteKit + Threlte web app (FastAPI + WebSocket streaming) for LLM-powered 3D CAM enhancements.
+          - Own ML and data infrastructure (ETL, dataset versioning, dashboards, CI/CD on AWS/Azure); partner cross-functionally with robotics and controls to integrate models into deployed robotic cells.
       - institution: University of California, Irvine
         title: Graduate Research Assistant & Postdoctoral Researcher
         start-date: 06/2015
@@ -111,7 +106,7 @@ sections:
           - Researched deep learning and computer vision methods for particle-physics detectors, focusing on robust classification, reconstruction, and anomaly detection with careful treatment of uncertainty and systematics.
           - Developed model-intelligibility techniques that map learned decision logic back into human-readable variables, enabling validation (spurious-correlation checks) and new hypothesis generation in exotic-search settings (e.g., semi-visible jets / dark-matter–motivated signatures).
           - Built end-to-end ML pipelines for large simulated and experimental datasets, covering data generation, preprocessing, feature engineering, model design, hyperparameter optimization, and uncertainty-aware evaluation.
-          - Collaborated across international experimental collaborations and communicated ML results to both domain experts and non-specialists.
+          - Translated complex ML methods and results for both physicists and non-specialist collaborators across international experimental teams.
       - institution: University of Hawaii, Manoa
         title: Graduate Research Assistant
         start-date: 08/2011
@@ -125,7 +120,7 @@ sections:
         end-date: 05/2011
         description: |
           - Designed and deployed secure precision-time (PTP) radio networks for U.S. Air Force installations, focusing on reliability, timing accuracy, and security.
-          - Held an active Secret security clearance.
+          - Held a Secret security clearance.
   
   - key: skills
     layout: skills
@@ -135,7 +130,7 @@ sections:
       - category: Languages
         items: [Python, Rust, SQL, C++, TypeScript/JavaScript, Bash/Shell]
       - category: ML Engineering
-        items: [PyTorch, NumPy, Pandas/Polars, scikit-learn, ONNX, MLflow, Weights & Biases, Optuna, Ray, Torch Lightning]
+        items: [PyTorch, Tensorflow, NumPy, Pandas/Polars, scikit-learn, ONNX, Edge/Embedded Inference, MLflow, Weights & Biases, Optuna, Ray, Torch Lightning]
       - category: LLM/Agents
         items: ["LLM Tool Use & Integrations", Structured Outputs, Evaluation Harnesses, Safety/Constraints, Multimodal Pipelines]
       - category: 3D Geometry/CAD
@@ -144,14 +139,14 @@ sections:
         items: [PointNet/PointNet++, 3D CNNs, Graph Networks, Flow Matching, 3D Transformers, Diffusion Models]
       - category: Vision/Perception
         items: [3D Perception Pipelines, Scene Understanding, Sensor Fusion, Real-time Anomaly Detection, OpenCV]
-      - category: Robotics
-        items: [ROS2, LLM-Assisted Robot Operation, Edge/Embedded ML]
       - category: Physics/Simulation
-        items: [Material Forming Behavior, Physics-informed ML, Constraints-based Optimization]
+        items: [Biomechanical/Material Property Modeling, Physics-informed ML, Constraints-based Optimization]
+      - category: 3D Web & Visualization
+        items: [Three.js, Threlte, SvelteKit, Tailwind CSS, Tauri, WebGL]
       - category: Data & Infrastructure
-        items: [ETL Pipelines, Dataset Versioning, Azure/AWS, InfluxDB, Kafka/RabbitMQ]
+        items: [Databricks/DeltaLake, Dagster, Azure/AWS, InfluxDB, Kafka/EventHub, DuckDB, gRPC/Protocol Buffers, WebSockets]
       - category: DevOps
-        items: [Docker, Kubernetes, Terraform, CI/CD, Linux/Unix, Git]
+        items: [Docker, Kubernetes, Terraform, CI/CD, Linux/Unix, NixOS/Nix, Git]
 
   - key: publications
     layout: numbered-list
@@ -176,9 +171,9 @@ sections:
         title: Chateaubriand Fellowship
         start-date: 2020
         description: |
-          Prestigious fellowship awarded by the French Embassy to support research in machine learning and AI at a leading French institution.
+          Fellowship awarded by the French Embassy to support research in machine learning and AI at a leading French institution.
       - institution:  National Science Foundation
         title: "NRT-DESE: Team Science for Integrative Graduate Training in Data Science and Physical Science"
         start-date: 2016-2018
         description: |
-          2 year NSF research grant for work in the interdisciplinary field of machine learning and the physical sciences.
+          Two-year NSF grant for interdisciplinary research in machine learning and the physical sciences.

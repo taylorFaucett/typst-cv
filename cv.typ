@@ -104,13 +104,15 @@
     
     // Set hyperlink styling
     show link: it => {
-        text(
-            fill: if "color-hyperlink" in settings { 
-              settings.color-hyperlink 
-            } else { 
-              rgb(0, 0, 255) // Default blue
-            },
-        )[#it]
+        underline(
+          text(
+              fill: if "color-hyperlink" in settings { 
+                settings.color-hyperlink 
+              } else { 
+                rgb(0, 0, 255) // Default blue
+              },
+          )[#it]
+        )
     }
     
     // set list(indent: 1em)

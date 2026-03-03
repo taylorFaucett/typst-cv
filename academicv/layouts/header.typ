@@ -23,28 +23,55 @@
     } else {none}
 }
 
-#let clearance-text(data, settings) = {
-    if ("clearance" in data.personal and data.personal.clearance != none and str(data.personal.clearance) != "") {
-        block(width: 100%)[
-            #data.personal.clearance
-            #v(-4pt)
-        ]
-    } else {none}
+#let phone-to-tel(phone) = {
+    if phone == none { none } else {
+        let raw = str(phone)
+        let cleaned0 = raw.replace(regex("[^0-9+]"), "")
+        let cleaned = if cleaned0.starts-with("+") {
+            "+" + cleaned0.slice(1).replace("+", "")
+        } else {
+            cleaned0.replace("+", "")
+        }
+        if cleaned == "" { none } else { "tel:" + cleaned }
+    }
 }
 
 #let contact-text(data, settings) = block(width: 100%)[
     #let profiles = (
-        if "email" in data.personal.contact and data.personal.contact.email != none { box(link("mailto:" + data.personal.contact.email)) },
-        if ("phone" in data.personal.contact and data.personal.contact.phone != none) {box(link("tel:" + data.personal.contact.phone))} else {none},
+        if "email" in data.personal.contact and data.personal.contact.email != none {
+            box[
+                #link("mailto:" + data.personal.contact.email)[#data.personal.contact.email]
+            ]
+        },
+        if ("phone" in data.personal.contact and data.personal.contact.phone != none) {
+            let tel = phone-to-tel(data.personal.contact.phone)
+            if tel != none {
+                box[
+                    #link(tel)[#data.personal.contact.phone]
+                ]
+            } else {
+                box[
+                    #data.personal.contact.phone
+                ]
+            }
+        } else {none},
         if ("website" in data.personal.contact) and (data.personal.contact.website != none) {
-            box(link(data.personal.contact.website)[#data.personal.contact.website.split("//").at(1)])
+            let url = str(data.personal.contact.website)
+            let disp = if url.contains("://") { url.split("://").at(1) } else { url }
+            box[
+                #link(url)[#disp]
+            ]
         }
     ).filter(it => it != none) // Filter out none elements from the profile array
 
     #if ("profiles" in data.personal) and (data.personal.profiles.len() > 0) {
         for profile in data.personal.profiles {
+            let url = str(profile.url)
+            let disp = if url.contains("://") { url.split("://").at(1) } else { url }
             profiles.push(
-                box(link(profile.url)[#profile.url.split("//").at(1)])
+                box[
+                    #link(url)[#disp]
+                ]
             )
         }
     }
@@ -70,10 +97,6 @@
                     
                     if item == "location" {
                         address-text(data, settings)
-                    }
-
-                    if item == "clearance" {
-                        clearance-text(data, settings)
                     }
                     
                     if item == "contact" {
