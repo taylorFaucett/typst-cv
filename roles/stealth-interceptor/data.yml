@@ -1,0 +1,172 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/roaldarbol/academicv/main/cv.typ.schema.json
+
+# Document settings
+settings:
+  font-heading: "Libertinus Serif"
+  font-body: "Libertinus Serif"
+  fontsize: 10pt
+  spacing-section: 12pt
+  spacing-entry: 0.1em
+  spacing-element: 3pt
+  spacing-line: 5pt
+  color-hyperlink: rgb(50, 120, 180)
+  page:
+    paper: "us-letter"
+    numbering: "1 / 1"
+    number-align: "center"
+    margin: 2.5cm
+
+# Personal information
+personal:
+  name: Taylor Faucett
+  titles:
+    - Senior Machine Learning Engineer
+    - Physicist
+  location:
+    city: Los Angeles
+    country: USA
+  contact:
+    email: taylorfaucett@gmail.com
+    phone: "+1 (801) 633-4509"
+    website: https://taylorfaucett.github.io
+  profiles:
+    - network: GitHub
+      username: taylorfaucett
+      url: https://github.com/taylorfaucett
+    - network: LinkedIn
+      username: taylorfaucett
+      url: https://linkedin.com/in/taylorfaucett
+
+# Section definitions and content
+sections:
+  - key: personal
+    layout: header
+    show: true
+    include: ["titles", "location", "contact"]
+
+  - key: statement
+    layout: prose
+    title: Professional Summary
+    show: true
+    entries:
+      - |
+          Senior ML engineer and physicist with production experience building real-time multi-sensor fusion pipelines, 3D perception systems, and edge-deployed anomaly detection in safety-critical environments.
+          Ph.D. research applied ML to large-scale particle-physics detector systems — designing multi-detector fusion pipelines and tiered trigger systems to detect and reconstruct rare events in high-throughput sensor data under strict latency and false-alarm constraints.
+          End-to-end experience from sensor data ingestion and feature engineering through model training, evaluation, and real-time deployment on edge/embedded hardware; strong physics background relevant to dynamics, kinematics, and sensor modeling. Previously held U.S. Secret security clearance (inactive).
+
+  - key: education
+    layout: timeline
+    primary-element: ["institution"]
+    secondary-element: ["title"]
+    title: Education
+    show: true
+    entries:
+      - institution: University of California, Irvine
+        location: Irvine, CA
+        title: Ph.D. in Physics
+        start-date: 2015
+        end-date: 2021
+      - institution: University of Hawaii, Manoa
+        location: Honolulu, HI
+        title: M.S. in Physics
+        start-date: 2011
+        end-date: 2015
+      - institution: Westminster College
+        location: Salt Lake City, UT
+        title: B.S. in Physics, Minor in Mathematics and Music
+        start-date: 2005
+        end-date: 2009
+
+  - key: experience
+    layout: timeline
+    primary-element: ["institution"]
+    secondary-element: ["title"]
+    tertiary-element: ["description"]
+    title: Professional Experience
+    show: true
+    entries:
+      - institution: Machina Labs
+        title: Senior Machine Learning Engineer
+        start-date: 06/2022
+        end-date: Present
+        description: |
+          - Built real-time anomaly-detection pipelines over streaming multi-sensor data (3D scan, force/torque, encoder telemetry), with alert thresholds tuned to balance missed defects against false alarms based on operational impact.
+          - Developed multi-sensor fusion pipelines integrating 3D-scan outputs, force/torque telemetry, toolpath geometry, and material metadata; temporally aligned heterogeneous signals into shared detection and monitoring workflows.
+          - Created physics-informed models combining process dynamics and sensor telemetry to predict material behavior and failure likelihood, with uncertainty-quantified outputs used for closed-loop process control.
+          - Deployed low-latency inference services (Rust/Python) on edge hardware in air-gapped environments under strict latency budgets, including model versioning and rollback-safe rollouts.
+          - Developed embedded-compatible inference components in Rust (`no_std`) for resource-constrained industrial deployments; validated real-time performance on industrial PCs under hard timing requirements.
+          - Lead end-to-end ML delivery: dataset curation, experiment design, model development, evaluation, and deployment on physical manufacturing systems in partnership with robotics and controls teams.
+      - institution: University of California, Irvine
+        title: Graduate Research Assistant & Postdoctoral Researcher
+        start-date: 06/2015
+        end-date: 06/2022
+        description: |
+          - Built ML pipelines for large-scale particle-physics detector systems, fusing outputs from calorimeter, tracking, and muon-detector subsystems for event detection, reconstruction, and rare-signature searches.
+          - Designed and operated tiered trigger pipelines (L1/L2/HLT) to process high-rate, heterogeneous sensor streams under strict latency and throughput requirements, maintaining low false-alarm rates across variable signal conditions.
+          - Built anomaly-search pipelines for previously-unseen signatures (e.g., semi-visible jets) in high-background environments; applied physics-based priors, uncertainty propagation, and statistical hypothesis testing with explicit false-discovery control.
+          - Developed model-interpretability approaches to map learned classifier behavior into human-readable physics variables and validate robustness to dataset shifts and spurious correlations.
+          - Co-authored work on parameterized neural networks that generalize across varying signal hypotheses without retraining.
+      - institution: University of Hawaii, Manoa
+        title: Graduate Research Assistant
+        start-date: 08/2011
+        end-date: 05/2015
+        description: |
+          - Integrated real-time analysis and trigger software with FPGA-based sensor readout for a deep-water neutrino telescope, working across hardware, firmware, and scientific analysis teams.
+          - Designed and implemented numerical simulations of Bose–Einstein condensates for a DoD-funded lattice-gas quantum computing experiment, bridging physics models and high-performance code.
+      - institution: Northrop Grumman Aerospace
+        title: Systems Engineer
+        start-date: 09/2009
+        end-date: 05/2011
+        description: |
+          - Designed and deployed secure precision-time (PTP) radio networks for U.S. Air Force installations, focusing on reliability, timing accuracy, and security in defense-critical environments.
+          - Held an active Secret security clearance; gained direct experience operating within DoD system requirements and compliance frameworks.
+
+  - key: skills
+    layout: skills
+    title: Technical Skills
+    show: true
+    entries:
+      - category: Vision & Perception
+        items: [3D Perception Pipelines, Scene Understanding, Real-time Anomaly Detection, Point Cloud Processing, Geometric Deep Learning, PointNet/PointNet++]
+      - category: Sensor Fusion & Pipelines
+        items: [Multi-sensor Fusion, Temporal Signal Alignment, Heterogeneous Data Integration, Tiered Trigger/Detection Pipelines, Streaming Event Processing, ETL]
+      - category: Edge & Real-time Systems
+        items: ["Air-gapped deployments", "Real-time inference", "Rust `no_std`", Cross-compilation, FPGA-based readout integration, Resource-constrained optimization]
+      - category: ML Engineering
+        items: [PyTorch, NumPy, Pandas/Polars, scikit-learn, ONNX, MLflow, Weights & Biases, Optuna, Ray, Torch Lightning]
+      - category: Physics & Simulation
+        items: [Physics-informed ML, Uncertainty Quantification, Kinematics, Numerical Simulation, Statistical Hypothesis Testing, False-alarm Rate Control]
+      - category: Languages
+        items: [Python, Rust, SQL, C++, TypeScript/JavaScript, Bash/Shell]
+      - category: Cloud & DevOps
+        items: [Docker, Kubernetes, Terraform, Azure/AWS/GCP, Linux/Unix, Git]
+
+  - key: publications
+    layout: numbered-list
+    title: Publications
+    show: true
+    entries:
+      - "Faucett, T. Decoding Black Box Models to Find New Physics at the LHC. Ph.D. Dissertation, University of California, Irvine (2021). https://escholarship.org/uc/item/63x9r13b"
+      - "Faucett, T., Hsu, SC. & Whiteson, D. Learning to identify semi-visible jets. J. High Energ. Phys. 2022, 132 (2022). https://doi.org/10.1007/JHEP12(2022)132"
+      - "Faucett, T., Thaler, J., Whiteson, D. Mapping machine-learned physics into a human-readable space. Phys. Rev. D 103, 036020 (2021). https://doi.org/10.1103/PhysRevD.103.036020"
+      - "Collado, J., Faucett, T., Witkowski, E. et al. Learning to isolate muons. J. High Energ. Phys. 2021, 200 (2021). https://doi.org/10.1007/JHEP10(2021)200"
+      - "Collado, J., Faucett, T., Howard, J. et al. Learning to identify electrons. Phys. Rev. D 103, 116028 (2021). https://doi.org/10.1103/PhysRevD.103.116028"
+      - "Baldi, P., Cranmer, K., Faucett, T. et al. Parameterized neural networks for high-energy physics. Eur. Phys. J. C 76, 235 (2016). https://doi.org/10.1140/epjc/s10052-016-4099-4"
+
+  - key: awards
+    layout: timeline
+    primary-element: ["title", "institution"]
+    tertiary-element: ["description"]
+    title: Honors & Awards
+    show: true
+    entries:
+      - institution: Chateaubriand Fellowship
+        title: Chateaubriand Fellowship
+        start-date: 2020
+        description: |
+          Fellowship awarded by the French Embassy to support research in machine learning and AI at a leading French institution.
+      - institution:  National Science Foundation
+        title: "NRT-DESE: Team Science for Integrative Graduate Training in Data Science and Physical Science"
+        start-date: 2016-2018
+        description: |
+          Two-year NSF grant for interdisciplinary research in machine learning and the physical sciences.
